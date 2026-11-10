@@ -1,10 +1,14 @@
-/* making my life easier */
+
         :root {
-            --dark: #354961;
-            --primary: #f2efc7;
-            --secondary: #d2bba0;
-            --accent: #9f7e69;
-            --light: #fbfff0;
+            /* colors */
+            --dark: #000000;
+            --primary: #e0e0e0;
+            --secondary: #f8f8f8;
+            --accent: #818181;
+            --light: #f8f8f8;
+            /* margins + padding */
+            --box-margin: 10px;
+            --box-padding: 10px;
         }
         * {
             box-sizing: border-box;
@@ -12,10 +16,12 @@
             padding: 0;
         }
         body {
-            background-color: var(--secondary);
+            background-color: black;
             color: var(--dark);
             text-align: center;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 14px;
             line-height: 1.5em;
         }
         .page-wrapper {
@@ -23,13 +29,51 @@
             margin: 0 auto;
             border: 3px solid var(--accent);
         }
+        .box-card {
+            width: 425px;
+            height: 345px;
+            background-color: var(--accent);
+            padding: var(--box-padding);
+            color: var(--light);
+            border: 3px solid var(--primary)
+        }
+        .box-card p {
+            text-align: center;
+        }
+        .button {
+            background-color: var(--accent);
+            width: 200px;
+            padding: var(--box-padding);
+            margin: 20px auto 0 auto;
+            border: 3px solid var(--primary)
+        }
+        .button a {
+            text-decoration: none;
+            color: var(--light)
+        }
+        .button a:hover {
+            color: var(--dark);
+        }
         .header {
+            height: 200px;
+            background-image: url(Images/0019.gif);
+            background-size: cover;
+            background-position: center;
             text-align: center;
             display: block;
             width: 100%;
-            padding-top: 30px;
+            padding-top: 70px;
             padding-bottom: 30px;
             background-color: var(--primary);
+        }
+        .header h1 {
+            color: white;
+            font-size: 52px;
+            text-shadow:
+            2px 2px 3px #000,
+            -2px -2px 3px #000,
+            1px 1px 0 #000,
+            -1px -1px 0 #000;
         }
         nav {
             position: sticky;
@@ -42,7 +86,7 @@
             text-align: center;
         }
         .navlink {
-            background-color: var(--light);
+            background-color: var(--primary);
             color: var(--dark);
             border-bottom: 3px solid var(--accent);
             float: left;
@@ -55,6 +99,10 @@
             padding-bottom: 20px;
             margin: 0;
         }
+        a:hover {
+            color: var(--accent);
+            font-size: 18px;
+        }
         .send-top {
             width: 200px;
             height: 100px;
@@ -63,7 +111,7 @@
         }
         .main {
             width: 70%;
-            height: 800px;
+            height: 400px;
             background-color: var(--light);
             float: right;
         }
@@ -80,36 +128,57 @@
             right: 0;
         }
         aside {
-            color: var(--light)
+            color: var(--light);
         }
         .left {
             width: 30%;
-            height: 800px;
+            height: 400px;
             background-color: var(--primary);
             float: left;
-            padding: 20px;
-            border-right: 3px solid var(--accent)
+            padding: var(--box-padding);
+            border-right: 3px solid var(--accent);
+            overflow: scroll;
+        }
+        .left-section {
+            text-align: left;
+            width: 200px;
+            margin: 0 auto;
         }
         .scroll {
             overflow: scroll;
-            width: 100%;
-            height: 200px;
+            height: 250px;
             border-top: 3px solid var(--dark);
             background-color: var(--light);
-            padding: 10px;
             margin-top: 20px;
+        }
+        .cast-feature {
+            width: 100%;
+            height: 500px;
+            padding: 30px;
+            background-color: var(--light);
+            border-top: 3px solid var(--accent);
+            color: var(--dark);
+            clear: both;
+            overflow: auto;
+        }
+        .cast-feature img {
+            padding: 10px 0 10px;
         }
         .footer {
             width: 100%;
-            height: 200px;
+            height: auto;
             background-color: var(--accent);
             color: var(--dark);
             clear: both;
-            padding: 20px;
+            padding: var(--box-padding);
             background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLYpxtOVEl8HwFkOHpIrKwg73x3-VrpEoEbUTgrWQRIg&s);
             background-size: cover;
             border-top: 3px solid var(--accent);
         }
         p {
-            padding: 10px;
+            padding: var(--box-padding);
+            text-align: left;
+        }
+        marquee {
+            width: 600px;
         }
